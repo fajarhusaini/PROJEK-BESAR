@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Proses</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Proses Data Harga</h1>
+</div>
+
+<div class="navbar">
+  <a href="/">Home</a>
+  <a href="/proses">Proses</a>
+  <a href="/result">Result</a>
+  <a href="/history">History</a>
+</div>
+
+<div class="content">
+  <div class="card">
+    <h3>Data Barang</h3>
+    <input id="namaBarang" placeholder="Nama Barang">
+
+    <h3 style="margin-top:20px">Data Toko</h3>
+    <input id="namaToko" placeholder="Nama Toko">
+    <input id="hargaToko" type="number" placeholder="Harga">
+    <button class="action" onclick="tambahToko()">Tambah Toko</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Toko</th>
+          <th>Harga</th>
+        </tr>
+      </thead>
+      <tbody id="tabelToko"></tbody>
+    </table>
+
+    <button class="action" onclick="hitungStatistik()">
+      Hitung Statistik
+    </button>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

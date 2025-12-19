@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>History</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Riwayat Analisis</h1>
+</div>
+
+<div class="navbar">
+  <a href="/">Home</a>
+  <a href="/proses">Proses</a>
+  <a href="/result">Result</a>
+  <a href="/history">History</a>
+</div>
+
+<div class="content">
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Barang</th>
+          <th>Mean</th>
+          <th>Median</th>
+          <th>Modus</th>
+          <th>Toko Termurah</th>
+          <th>Harga</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (data.length === 0) { %>
+          <tr>
+            <td colspan="6">Belum ada data</td>
+          </tr>
+        <% } else { %>
+          <% data.forEach(d => { %>
+          <tr>
+            <td><%= d.barang %></td>
+            <td><%= d.mean %></td>
+            <td><%= d.median %></td>
+            <td><%= d.modus %></td>
+            <td><%= d.toko %></td>
+            <td>Rp <%= d.harga %></td>
+          </tr>
+          <% }) %>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
